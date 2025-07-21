@@ -1,5 +1,4 @@
 import { Movie } from "../data/movies";
-
 export function isMovieTitleUnique(movies: Movie[], title: string) {
   const slug = title.toLowerCase().replace(/[^a-z0-9]/g, "");
   return !movies.some(m => m.slug === slug);
