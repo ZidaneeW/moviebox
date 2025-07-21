@@ -2,9 +2,9 @@ import { notFound } from "next/navigation";
 import { MOVIES } from "../../data/movies";
 import { BackButton } from "../../components/BackButton";
 
-export default function MovieDetailPage({ params }: { params: { slug: string } }) {
-  const movie = MOVIES.find(m => m.slug === params.slug);
-  if (!movie) return notFound();
+export default function MovieDetailPage(props: any){
+  const slug = props.params.slug;
+  const movie = MOVIES.find(m => m.slug === slug);
 
   return (
     

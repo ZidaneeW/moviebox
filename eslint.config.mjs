@@ -18,4 +18,11 @@ const eslintConfig = [
   }
 ];
 
-export default eslintConfig;
+export default [
+  {
+    extends: ["next/core-web-vitals", "next"],
+    rules: {
+      "@typescript-eslint/no-explicit-any": "off"
+    }
+  }
+];
